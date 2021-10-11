@@ -1,0 +1,12 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Resume</title>
+</head>
+<body>
+<h2>Resumes</h2>
+{% for res in resume %}
+<div>{{res.author}}: {{res.description}}</div>
+{% endfor %}
+</body>
+</html>

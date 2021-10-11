@@ -1,0 +1,15 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>signup</title>
+</head>
+<body>
+<div>
+<form method='post', action='signup'>
+{% csrf_token%}
+<table>{{form.as_table}}</table>
+<button type='submit'>send</button>
+</form>
+</div>
+</body>
+</html>

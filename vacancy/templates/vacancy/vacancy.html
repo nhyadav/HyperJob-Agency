@@ -1,0 +1,13 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Vacancy</title>
+</head>
+<body>
+<h2>Vacancies</h2>
+{% for res in vacancy %}
+<div>{{res.author}}: {{res.description}}</div>
+{% endfor %}
+
+</body>
+</html>

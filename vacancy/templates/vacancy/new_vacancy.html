@@ -1,0 +1,16 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Create new Vacancy</title>
+</head>
+<body>
+<div>
+<form action='/create' method='post'>
+{% csrf_token %}
+<label>Description</label><br>
+<input type='text' name='description'><br>
+<button type='submit'></button>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>HyperJob Agency</title>
+</head>
+<body>
+<div><a href="/">&#x3C;- Main page</a></div>
+<h2>Profile</h2>
+{% if not is_authenticated %}
+<h4>Hello <b>Guest</b></h4>
+<div><a href='/login'>Login</a></div>
+<div><a href='/signup'>SignUp</a></div>
+{% else %}
+{% if is_staff %}
+<h3>Create a new vacancy</h3>
+<form action='/vacancy/new' method='post'>
+{% csrf_token %}
+<table>{{form.as_table}}</table>
+<button type='submit'>create</button>
+</form>
+{% else %}
+<h3>Create a new resume</h3>
+<form action='/resume/new', method='post'>
+{% csrf_token %}
+<table>{{form.as_table}}</table>
+<button type='submit'>create</button>
+</form>
+{% endif %}
+{% endif %}
+</form>
+</body>
+</html>
